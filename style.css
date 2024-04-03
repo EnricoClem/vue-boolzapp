@@ -42,7 +42,7 @@ h2 {
 
 /* BACKGROUND & CONTAINER _______________ */
 
-.app {
+#app {
     width: 100vw;
     height: 100vh;
     padding: 0;
