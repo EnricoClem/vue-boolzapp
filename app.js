@@ -144,8 +144,8 @@ createApp({
 
     computed: {
         currentContact: function() {
-            return this.contacts[this.currentIndex]
+            return this.contacts[this.currentIndex];
         }
-    }
+    },
     
 }).mount('#app')
