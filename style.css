@@ -169,10 +169,21 @@ h2 {
 }
 
 .chat-list .block-info {
-    background-color: var(--white);
     border-top: 0.5px solid var(--light_gray);
     display: flex;
     justify-content: space-between;
+}
+
+.chat-list .block-info:hover {
+    background-color: var(--light_gray);
+}
+
+.closed-chat {
+    background-color: var(--white);
+}
+
+.chat-active {
+    background-color: none;
 }
 
 .avatar-card.side {

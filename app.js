@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            currentIndex: 0,
             contacts: [ {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
@@ -137,7 +138,7 @@ createApp({
                         status: 'received'
                     } ],
             }
-        ]
+        ],
     }
 }
     

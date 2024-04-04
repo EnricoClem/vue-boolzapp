@@ -54,7 +54,9 @@
 
                 <!-- Chat list -->
                 <ul class="chat-list">
-                    <li class="block-info" v-for="contact in contacts">
+                    <li class="block-info" 
+                    v-for="(contact,i) in contacts"
+                    :class="i === currentIndex ? 'chat-active' : 'closed-chat'">
                         <div class="avatar-card side">
                             <img class="avatar" :src="contact.avatar" alt="">
                             <div class="avatar-info">
