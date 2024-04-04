@@ -100,49 +100,19 @@
                 <div class="chat-block">
                     <div class="chat-background"></div>   
                     <div class="chat-container">
-                        <div class="container-messages">
+                        <ul class="container-messages">
 
-                            <div class="message-mine">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptas temporibus, perferendis necessitatibus eligendi neque nemo fugit iure id vel?</p>
+                            <li class="message"
+                            v-for="currentMessage in contacts[currentIndex].messages"
+                            :class="currentMessage.status">
+                                <p>{{ currentMessage.message }}</p>
                                 <div class="info-message">
                                     <i class="fa-solid fa-angle-down"></i>
-                                    <div class="send-time">16:13</div>
+                                    <div class="send-time">{{ currentMessage.date.slice(11,16) }}</div>
                                 </div>
-                            </div>
+                            </li>
                             
-                            <div class="message-recived">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ipsam aliquid reiciendis sunt? Porro harum id consequatur repellendus temporibus enim eum soluta doloremque quae pariatur. Debitis fugiat dolorum possimus? Repellendus enim porro nulla vitae explicabo!</p>
-                                <div class="info-message">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    <div class="send-time">16:15</div>
-                                </div>
-                            </div>
-
-                            <div class="message-mine">
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <div class="info-message">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    <div class="send-time">16:13</div>
-                                </div>
-                            </div>
-
-                            <div class="message-mine">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur accusantium iusto, velit iure officia ducimus?</p>
-                                <div class="info-message">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    <div class="send-time">16:13</div>
-                                </div>
-                            </div>
-
-                            <div class="message-recived">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quaerat possimus doloribus dolorum, repellat odio officia asperiores inventore atque nisi libero ex quos sed quidem! Quae neque nisi, unde alias molestias iste quo dolorum dicta provident hic voluptatem velit suscipit quas saepe fuga reprehenderit aperiam. Nulla consequuntur nobis sapiente ipsa?</p>
-                                <div class="info-message">
-                                    <i class="fa-solid fa-angle-down"></i>
-                                    <div class="send-time">16:13</div>
-                                </div>
-                            </div>
-                            
-                        </div>
+                        </ul>
                     </div>
                 </div>
 

@@ -263,18 +263,18 @@ h2 {
     gap: 10px;
 }
 
-[class^="message"] {
+.message {
     border-radius: 10px;
     display: flex;
     max-width: 80%;
 }
 
-.message-mine {
+.sent {
     background-color: var(--light_green);
     align-self: flex-end;
 }
 
-.message-recived {
+.received {
     background-color: var(--white);
     align-self: flex-start;
 }
@@ -344,10 +344,6 @@ h2 {
 
     [class^="message"] {
         max-width: 70%;
-    }
-
-    [class^="message"] p {
-        padding-bottom: 65px;
     }
     
 }
