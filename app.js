@@ -145,7 +145,26 @@ createApp({
     computed: {
         currentContact: function() {
             return this.contacts[this.currentIndex];
+        },
+        currentChat() {
+            return this.currentContact.messages
         }
     },
+
+    methods: {
+        sendMessage() {
+            const message = {
+                date: '10/01/2020 15:30:55',
+                message: this.messageText,
+                status: 'sent'
+            }
+
+            if (this.messageText !== '') {
+                const messages = this.contacts[this.currentIndex].messages
+                messages.push(message)
+            }
+
+        }
+    }
     
 }).mount('#app')
