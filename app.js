@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             currentIndex: 3,
+            messageText: '',
             contacts: [ {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
@@ -159,10 +160,22 @@ createApp({
                 status: 'sent'
             }
 
+            const messages = this.contacts[this.currentIndex].messages
+
             if (this.messageText !== '') {
-                const messages = this.contacts[this.currentIndex].messages
                 messages.push(message)
             }
+
+            this.messageText = '';
+
+            setTimeout(() => {
+                const message = {
+                    date: '10/01/2020 15:31:55',
+                    message: 'Ok!',
+                    status: 'received'
+            }
+            messages.push(message)
+            }, 1000)
 
         }
     }
