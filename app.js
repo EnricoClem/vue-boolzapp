@@ -5,6 +5,7 @@ createApp({
         return {
             currentIndex: 3,
             messageText: '',
+            search: '',
             contacts: [ {
                 name: 'Michele',
                 avatar: './img/avatar_1.jpg',
@@ -149,6 +150,9 @@ createApp({
         },
         currentChat() {
             return this.currentContact.messages
+        },
+        filteredContacts() {
+            return this.contacts.filter(item => item.name.includes(this.search))
         }
     },
 
