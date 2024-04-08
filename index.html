@@ -55,10 +55,10 @@
 
                 <!-- Chat list -->
                 <ul class="chat-list">
-                    <li class="block-info" 
-                    @click="currentIndex = i"
+                    <li @click="currentIndex = i"
                     v-for="(contact,i) in contacts"
-                    :class="i === currentIndex ? 'chat-active' : 'closed-chat'">
+                    :class="[ isVisible(contact) ? '' : 'hidden', i === currentIndex ? 'chat-active' : 'closed-chat']"
+                    class="block-info">
                         <div class="avatar-card side">
                             <img class="avatar" :src="contact.avatar" alt="">
                             <div class="avatar-info">

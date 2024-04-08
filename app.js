@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            currentIndex: 3,
+            currentIndex: 0,
             messageText: '',
             search: '',
             contacts: [ {
@@ -151,12 +151,13 @@ createApp({
         currentChat() {
             return this.currentContact.messages
         },
-        filteredContacts() {
-            return this.contacts.filter(item => item.name.includes(this.search))
-        }
     },
 
     methods: {
+        isVisible(contact) {
+            return contact.name.toLowerCase().includes(this.search.toLowerCase())
+        },
+
         sendMessage() {
             const message = {
                 date: '10/01/2020 15:30:55',
@@ -182,6 +183,8 @@ createApp({
             }, 1000)
 
         }
-    }
+    },
     
 }).mount('#app')
+
+// this.contacts[i].name.startsWith(this.search)

@@ -208,7 +208,6 @@ h2 {
     font-size: 12px;
 }
 
-
 /* CHAT AREA ____________________ */
 
 /* Chat header ----- */
@@ -314,6 +313,9 @@ h2 {
     margin: 10px 20px;
 }
 
+.hidden {
+    display: none !important;
+}
 
 
 
